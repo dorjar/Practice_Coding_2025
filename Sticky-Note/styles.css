@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background: #f0f0f0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-note {
+    position: absolute;
+    width: 200px;
+    min-height: 150px;
+    background: #fffacd;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee;
+    padding: 10px;
+    cursor: move;
+    resize: both;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.sticky-note textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    resize: none;
+    color: #333;
+    outline: none;
+}
