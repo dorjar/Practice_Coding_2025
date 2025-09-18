@@ -6,6 +6,7 @@ This repository contains my practice coding projects.
 - [Toggle Tab Component](./toggle-tab-component/)
 - [Website Animations](./website-animations/)
 - [Sticky Note](./Sticky-Note/)
+- [Animated_Product](./Animated_Product/)
 
 ---
 
