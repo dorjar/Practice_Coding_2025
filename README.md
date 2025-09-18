@@ -7,6 +7,7 @@ This repository contains my practice coding projects.
 - [Website Animations](./website-animations/)
 - [Sticky Note](./Sticky-Note/)
 - [Animated_Product](./Animated_Product/)
+- [Color_Picker_Widget](./Color_Picker_Widget/)
 
 ---
 
