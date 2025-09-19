@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa; /* delikatne tło strony */
+}
+
+.navbar {
+  padding: 15px;
+  background: #2c2c54; /* ciemny fiolet */
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none; /* usuwa bullet pointy */
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: #40407a; /* niebiesko-fioletowe tło */
+  padding: 20px;
+  border-radius: 8px;
+  display: none; /* <-- menu ukryte domyślnie */
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+ul[hidden] {
+  display: none; /* obsługuje też atrybut hidden */
+}
+
+ul:not([hidden]) {
+  display: flex; /* pokazuje menu dopiero po kliknięciu */
+}
+
+ul li {
+  color: #d2a8ff; /* jasny fiolet */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+ul li:hover {
+  color: #fbc531; /* żółty kontrast przy hover */
+}
