@@ -45,7 +45,7 @@ body {
     transform: skewX(10deg) scale(1, 1) translateX(4px) translateY(0);
     z-index: -1;
     white-space: nowrap;
-    latter-spacing: 2px;
+    letter-spacing: 2px;
     animation: sunset 6s;
 }
 
