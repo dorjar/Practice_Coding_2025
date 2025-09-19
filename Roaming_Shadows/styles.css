@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+    margin: 0;
+    background: linear-gradient(141deg, #0fb9ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    font-family: 'Anton', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    padding: 10px;
+    animation: skyChange 6s forwards;
+    display: flex;
+    align-items: center;
+}
+
+
+.sun {
+    position: absolute;
+    top: -150px;
+    left: 80%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, yellow 60%, gold 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px 15px rgba(255, 255, 0, 0.6);
+    z-index: 45;
+    animation: sundown 6s linear forwards;
+}
+
+.container {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    width: max-content;
+    height: 1em;
+}
+
+.shadow {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: skewX(10deg) scale(1, 1) translateX(4px) translateY(0);
+    z-index: -1;
+    white-space: nowrap;
+    latter-spacing: 2px;
+    animation: sunset 6s;
+}
+
+.main-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    -webkit-text-stroke: 0.25px black;
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    white-space: nowrap;
+    letter-spacing: 2px; 
+}
+
+@keyframes sunset {
+    0% {
+        transform: skewX(10deg) scale(1, 1) translateX(4px) translateY(0);
+    }
+    100% {
+        transform: skewX(25deg) scale(1, 0.1) translateX(40px) translateY(80px);
+    }
+}   
+
+@keyframes sundown {
+    0% {
+
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(1000px);
+    }
+}
+
+    @keyframes skyChange {
+        0% {
+            background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+        }
+        50% {
+            background: linear-gradient(141deg, #1fc8db 0%, #2cb5e8 51%, #2cb5e8 75%);
+        }
+
+        80% {
+            background: linear-gradient(200deg, #000aaa 0%, #000aaa 51%, #000000 75%);
+        }
+        100% {
+            background: linear-gradient(200deg, #000000 0%, #000 51%, #000000 75%);
+        }
+        
+    }
+    
