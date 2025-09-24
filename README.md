@@ -10,6 +10,7 @@ This repository contains my practice coding projects.
 - [Color_Picker_Widget](./Color_Picker_Widget/)
 - [Hamburger_Menu](./Hamburger_Menu/)
 - [Roaming_Shadows](./Roaming_Shadows/)
+- [3D_Roatation_Animation](./3D_Roatation_Animation/)
 
 ---
 
