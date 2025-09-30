@@ -11,7 +11,8 @@ This repository contains my practice coding projects.
 - [Hamburger_Menu](./Hamburger_Menu/)
 - [Roaming_Shadows](./Roaming_Shadows/)
 - [3D_Roatation_Animation](./3D_Roatation_Animation/)
-- [Review_Box](./Review_Box//)
+- [Review_Box](./Review_Box/)
+- [CSS_Menu](./CSS_Menu/)
 
 ---
 
