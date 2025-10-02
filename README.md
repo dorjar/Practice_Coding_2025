@@ -14,7 +14,29 @@ This repository contains my practice coding projects.
 - [Review_Box](./Review_Box/)
 - [CSS_Menu](./CSS_Menu/)
 - [Music Festival 2024](./Web_Assessment_2024/)
+- [Festival_2024](./Festival_2024/) (Node.js + Express)
+
 ---
+
+## 🚀 Running Festival_2024 (Node.js/Express)
+
+This project is built with **Node.js + Express**.  
+Unlike static HTML projects, it cannot run on GitHub Pages.  
+To run it locally:
+
+1. Navigate to the project folder:
+   ```bash
+   cd Festival_2024
+2. Install dependencies
+   npm install
+3. Start the development server  
+    node index.js
+    or
+    npm start
+4. Open your browser
+   http://localhost:5000/
+
+
 
 ## 📘 Cheatsheets
 - [HTML Cheatsheet](./HTML_Cheatsheet.md)
@@ -25,6 +47,7 @@ This repository contains my practice coding projects.
 - HTML5  
 - CSS3  
 - JavaScript 
+- Node.js + Express (for Festival_2024)
 
 ---
 
