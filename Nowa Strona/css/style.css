@@ -1,0 +1,436 @@
+
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+    font-family: 'PT Sans', sans-serif; /* Sets the font for the entire website */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    background-color: #f9f9f9; /* Sets a light background color */
+    color: #333; /* Sets the text color */
+    line-height: 1.6; /* Sets the line height for readability */
+}
+
+header {
+    background-color: #3F51B5; /* Sets the header background color (Purple) */
+    color: white; /* Sets the text color */
+    padding: 1rem 2rem; /* Adds padding inside the header */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Distributes space between logo and nav */
+    align-items: center; /* Aligns items vertically in the center */
+    position: fixed; /* Fixes the header at the top */
+    width: 100%; /* Ensures the header spans the full width */
+    top: 0; /* Positions the header at the top */
+    z-index: 1000; /* Ensures the header is above other elements */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+}
+
+.logo-container {
+    position: relative; /* Allows absolute posotioning for children */
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers items */
+    
+}
+
+.logo-container img {
+    max-height: 50px; /* Limits the height of the logo image*/
+    height: auto; /* Maitains aspect ratio */
+    width: auto; /* Maitains aspect ratio */
+}
+
+.logo-text {
+    position: absolute; /* Positions text absolutely within the container */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts position to be exactly center */
+    font-size: 0.5rem; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    color: purple; /* Sets text color */
+    text-align: center; /* Centers text */
+}
+
+.nav-links {
+    list-style: none; /* Removes the default list styling */
+    display: flex; /* Uses flexbox for layout */
+    gap: 1.5rem; /* Adds space between nav items */  
+    justify-content: center; /* Centers nav items */
+    flex-grow: 1; /* Allows nav items to grow and take available space */
+    transition: margin-top 0.3s; /* Add transition for smooth animation */
+}
+
+.nav-links a {
+    color: white; /* Sets the link text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 0.5rem 1rem; /* Adds padding around links */
+    transition: background-color 0.3s, transform 0.3s; /* Adds transition effects */
+    border-radius: 4px; /* Rounds the corners */
+    display: flex;
+}
+
+.nav-links a:hover {
+    background-color: #303F9F; /* Changes background color on hover */
+    transform: scale(1.1); /* Enlarges the link slightly on hover */
+}
+
+.hamburger {
+    display: none; /* Hides the hamburger menu by default */
+    flex-direction: column; /* Stacks the bars vertically */
+    cursor: pointer; /* Changes cursor to pointer */
+    position: absolute; /* Positions the hamburger menu */
+    right: 20px; /* Positions the hamburger menu to the right */
+}
+
+.hamburger div {
+    width: 25px; /* Sets the width of the bars */
+    height: 3px; /* Sets the height of the bars */
+    background-color: white; /* Sets the bar color */
+    margin: 4px; /* Adds space between the bars */
+    transition: transform 0.3s; /* Adds transition effect */
+  }
+
+.main {
+    margin-top: 80px; /* Adds top margin to account for the fixed header */
+    transition: margin-top 0.3s; /* Add transition for smooth animation */
+}
+
+
+
+.hero {
+    text-align: center; /* Centers text */
+    padding: 6rem 1rem; /* Adds padding */
+    background: url('../res/images/129979-music_festival-lasers.jpg') no-repeat center center/cover; /* Sets background image */
+    color: white; /* Sets text color */
+    position: relative; /* Allows positioning of pseudo-element */
+    animation: fadeIn 2s ease-in-out; /* Adds fade-in animation */
+}
+
+.hero::after {
+    content: ''; /* Inserts an empty pseudo-element */
+    position: absolute; /* Positions it absolutely */
+    top: 0; /* Positions at the top */
+    left: 0; /* Positions at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    z-index: -1; /* Places behind the content */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Sets font size */
+    margin: 0; /* Removes default margin */
+    animation: slideInDown 1s ease-in-out; /* Adds slide-down animation */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Sets font size */
+    animation: slideInUp 1s ease-in-out; /* Adds slide-up animation */
+    margin: 0.5rem 0 0; /* Adds margin to position date properly */
+}
+
+.event-date {
+    padding: 0.5rem; /* Adds padding */
+    border-radius: 5px; /* Rounds corners */
+}
+
+span {
+    font-size: clamp(4rem, 2vw, 3rem);
+    color: #32f895;
+    justify-content: center;
+    bottom: 50px;
+    width: 100%;
+    text-shadow: 2px 2px 8px #f4f80333;
+    align-items: center;
+}
+
+.section {
+    padding: 2rem 1rem; /* Adds padding */
+    max-width: 1200px; /* Sets max width */
+    margin: 0 auto; /* Centers the section */
+    animation: fadeIn 2s ease-in-out; /* Adds fade-in animation */
+}
+
+.section h2 {
+    text-align: center; /* Centers text */
+    font-size: 2.5rem; /* Sets font size */
+    margin-bottom: 2rem; /* Adds bottom margin */
+    color: #3F51B5; /* Sets text color (Purple) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle text shadow */
+    
+}
+
+.section p {
+    text-align: center; /* Centers text */
+    margin-bottom: 1.5rem; /* Adds bottom margin */
+}
+
+
+
+.acts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.act {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    text-align: center;
+}
+
+.act img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.act:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.stages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.stage {
+    background: linear-gradient(135deg, #34a853 0%, #3F51B5 100%); /* Adds a gradient background with green and purple */
+    color: white; /* Sets text color */ 
+    padding: 1.5rem; /* Adds padding */
+    border-radius: 12px; /* Rounds corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adds transition effects */
+    max-width: 300px;
+    text-align: center;
+}
+
+.stage img {
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+    border-radius: 12px; /* Rounds corners */
+    margin-bottom: 1rem; /* Adds bottom margin */
+    transition: transform 0.3s, filter 0.3s; /* Adds transition effects */
+}
+
+.stage:hover {
+    transform: translateY(-10px); /* Moves up slightly on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Adds a stronger shadow on hover */
+}
+
+.stage img:hover {
+    transform: scale(1.05); /* Slightly enlarges image on hover */
+    filter: brightness(0.8); /* Darkens image on hover */
+}
+
+.stage h3 {
+    font-size: 1.8rem; /* Sets font size */
+    margin-bottom: 1rem; /* Adds bottom margin */
+    color: #fff; /* Sets text color */
+}
+
+.stage p {
+    font-size: 1rem; /* Sets font size */
+    margin-bottom: 1.5rem; /* Adds bottom margin */
+    color: #f0f0f0; /* Sets text color */
+}
+
+.performances {
+    margin-top: 1rem;
+}
+
+.performance {
+    display: flex; /* Uses flexbox */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin-top: 0.5rem; /* Adds top margin */
+    padding: 0.5rem; /* Adds padding */
+    background-color: rgba(255, 255, 255, 0.2); /* Sets background color */
+    border-radius: 4px; /* Rounds corners */
+    color: white; /* Sets text color */
+    background-color: rgba(255, 255, 255, 0.4); /* Changes background color on hover */
+}
+
+.performance:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Changes background color on hover */
+}
+
+.performance .time {
+    font-weight: bold; /* Makes text bold */
+    font-size: 1.5rem;
+}
+
+.performance .artist-name {
+    font-style: italic; /* Italicizes text */
+    font-size: 1.5rem;
+}
+
+.faq {
+    background: linear-gradient(135deg, #e0f7fa 0%, #a5d6a7 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.question h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3F51B5;
+}
+
+.question p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.question a {
+    color: #3F51B5;
+    text-decoration: none;
+}
+
+.question a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #3F51B5; /* Sets background color (Purple) */
+    color: white; /* Sets text color */
+    text-align: center; /* Centers text */
+    padding: 1rem 0; /* Adds padding */
+    position: relative; /* Allows positioning */
+    bottom: 0; /* Positions at the bottom */
+    width: 100%; /* Full width */
+}
+
+footer a {
+    color: white; /* Sets link color */
+    text-decoration: none; /* Removes underline */
+    margin: 0 0.5rem; /* Adds horizontal margin */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underlines on hover */
+}
+
+footer i {
+    margin-right: 0.5rem; /* Adds right margin */
+}
+
+/* Contact Form Styles */
+.contact form {
+    display: flex; /* Uses flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem; /* Adds space between items */
+    max-width: 600px; /* Sets max width */
+    margin: 0 auto; /* Centers the form */
+    background: white; /* Sets background color */
+    padding: 2rem; /* Adds padding */
+    border-radius: 8px; /* Rounds corners */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds shadow */
+}
+
+.contact form label {
+    margin-bottom: 0.5rem; /* Adds bottom margin */
+}
+
+.contact form input, .contact form textarea, .contact form button {
+    padding: 0.75rem; /* Adds padding */
+    border: 1px solid #ccc; /* Sets border color */
+    border-radius: 4px; /* Rounds corners */
+    font-size: 1rem; /* Sets font size */
+}
+
+.contact form input:focus, .contact form textarea:focus, .contact form button:focus {
+    outline: none; /* Removes default outline */
+    border-color: #3F51B5; /* Changes border color on focus (Purple) */
+}
+
+.contact form button {
+    background-color: #3F51B5; /* Sets button background color (Purple) */
+    color: white; /* Sets button text color */
+    cursor: pointer; /* Changes cursor to pointer */
+    border: none; /* Removes border */
+    transition: background-color 0.3s; /* Adds transition effect */
+}
+
+.contact form button:hover {
+    background-color: #303F9F; /* Changes background color on hover (Darker purple) */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hides nav links by default */
+        flex-direction: column; /* Stacks items vertically */
+        width: 100%; /* Full width */
+        text-align: center; /* Centers text */
+        background-color: #3F51B5; /* Sets background color (Purple) */
+        position: absolute; /* Positions absolutely */
+        top: 60px; /* Positions below the header */
+        left: 0; /* Aligns to the left */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds shadow */
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; /* Displays nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Displays hamburger menu */
+        left: 20px; /* Positions hamburger menu */
+    }
+
+    .section h2 {
+        font-size: 1.5rem; /* Reduces font size */
+    }
+
+    .acts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stages-container {
+        flex-direction: column;
+        align-items: center ;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Starts with 0 opacity */
+    to { opacity: 1; } /* Ends with full opacity */
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-100%); } /* Starts from above */
+    to { transform: translateY(0); } /* Ends in place */
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); } /* Starts from below */
+    to { transform: translateY(0); } /* Ends in place */
+}
