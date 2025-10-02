@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Summer Festival 2024 - Join us for an unforgettable experience with top-notch performances, amazing food, and vibrant atmosphere.">
+    <meta name="keywords" content="Summer Festival, Music Festival, Live Performances, 2024 Festival">
+    <title>Summer Festival - FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="main">
+        <section class="faq section">
+            <h2>FAQ</h2>
+            <% faqs.forEach(faq => { %>
+                <div class="question-container">
+                    <div class="question">
+                        <h3><%= faq.question %> <i class="fas fa-chevron-down question-icon"></i></h3>
+                        <div class="question-answer">
+                            <p><%- faq.answer.replace('Contact Us', '<a href="/contact">Contact Us</a>') %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+            <section class="section location">
+                <h2>Event Location</h2>
+                <p>Hyde Park, Rangers Lodge, W2 2UH, London</p>
+                <div class="map-container">
+                    <img src="/res/images/Map.jpg" alt="Event Location Map" style="width: 300; height: auto;">
+                </div>
+            </section>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/script/script.js"></script>
+</body>
+</html>

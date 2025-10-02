@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Festival - Line Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="main">
+        <section class="lineup section">
+            <h2>Line Up</h2>
+            <div class="acts">
+                <% lineup.forEach(act => { %>
+                    <div class="act" id="<%= act.act_name.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '') %>">
+                        <h3><%= act.act_name %></h3>
+                        <% if (act.act_name.includes('The Rockers')) { %>
+                            <a href="/stages#main-stage">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('DJ Spinmaster')) { %>
+                            <a href="/stages#main-stage">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('The Jazz Ensemble')) { %>
+                            <a href="/stages#jazz-lounge">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('Melody Waves')) { %>
+                            <a href="/stages#local-talent-stage">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('Laughter Therapy')) { %>
+                            <a href="/stages#comedy-corner">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('The Hip Hop Crew')) { %>
+                            <a href="/stages#dance-area">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('Strings Attached')) { %>
+                            <a href="/stages#acoustic-stage">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else if (act.act_name.includes('Rising Star')) { %>
+                            <a href="/stages#local-talent-stage">
+                                <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                            </a>
+                        <% } else { %>
+                            <img src="/res/images/<%= act.image %>" alt="<%= act.act_name %>">
+                        <% } %>
+                        <p><%= act.description %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/script/script.js"></script>
+</body>
+</html>
