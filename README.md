@@ -15,6 +15,9 @@ This repository contains my practice coding projects.
 - [CSS_Menu](./CSS_Menu/)
 - [Music Festival 2024](./Web_Assessment_2024/)
 - [Nowa Strona](./Nowa%20Strona/)
+- [Sample Website1](./Completed%20HTML/)
+- [Sample Website2](./Sample_website/)
+
 
 ---
 ## 🎶 Festival 2024 (Node/Express Project)

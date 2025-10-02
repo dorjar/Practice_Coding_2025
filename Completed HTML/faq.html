@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header2">
+        <nav>
+            <a href="index.html"> <img src="images/logo.png" heigth="160px" width="160px" /> </a>
+        
+        <div class="menu" id="menu-block">
+            <i class="fa fa-times" onclick="hide()"></i>
+           <ul>
+             <li><a href="/">Home</a></li>  
+             <li><a href="/events">Events</a></li> 
+             <li><a href="/guests">Guests</a></li> 
+             <li><a href="/faq">FAQ</a></li> 
+             <li><a href="/contact">Contact</a></li> 
+           </ul>
+       </div>
+       <i class="fa fa-bars" onclick="show()"></i>
+    </nav>
+    <div class="text-box">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    </section>
+
+    <section class="faq">
+
+        <main>
+            <details open>
+              <summary>How ro cancel my tickets?</summary>
+              <div class="faq_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor suscipit, iure tenetur eveniet, vero tempore delectus? Perferendis, quisquam ullam consequuntur?</p>
+              </div>
+            </details>
+          
+              <details>
+              <summary>How to rebook my tickets?</summary>
+              <div class="faq_content">
+                <p>Fugiat quo voluptas nulla pariatur? Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+              </div>
+            </details>
+             </main>
+
+
+    </section>
+
+   
+    <section class="footer">
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorum aut commodi laudantium aspernatur quibusdam accusantium vero hic, <br> quaerat omnis libero! Quas soluta vitae, nam excepturi adipisci voluptatum enim possimus?</p>
+        <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made by Amjad Alam just for Tutorial</p>
+    </section>
+
+<script>
+    var b=document.getElementById("menu-block");
+    function hide()
+    {
+        b.style.right="-200px";
+        b.style.transition="1s";
+    }
+    function show()
+    {
+        b.style.right="0";
+        b.style.transition="1s";
+    }
+</script>
+</body>
+</html>
