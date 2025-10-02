@@ -27,14 +27,14 @@ To run it locally:
 1. Navigate to the project folder:
    ```bash
    cd Festival_2024
-2. Install dependencies
-   npm install
-3. Start the development server  
-    node index.js
+2. Install dependencies:
+   ```bash npm install
+3. Start the development server: 
+    ```bashnode index.js
     or
-    npm start
+    ```bash npm start
 4. Open your browser
-   http://localhost:5000/
+   ```bash http://localhost:5000/
 
 
 
