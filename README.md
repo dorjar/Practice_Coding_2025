@@ -14,25 +14,30 @@ This repository contains my practice coding projects.
 - [Review_Box](./Review_Box/)
 - [CSS_Menu](./CSS_Menu/)
 - [Music Festival 2024](./Web_Assessment_2024/)
-- [Festival_2024](./Festival_2024/) (Node.js + Express)
 
 ---
+## 🎶 Festival 2024 (Node/Express Project)
 
-## 🚀 Running Festival_2024 (Node.js/Express)
+This is a full-stack project built with **Node.js** and **Express**.  
+Since it uses a server, it cannot be hosted on GitHub Pages.  
 
-This project is built with **Node.js + Express**.  
-Unlike static HTML projects, it cannot run on GitHub Pages.  
-To run it locally:
+👉 You can explore the project here:  
+[Festival 2024 Repository](https://github.com/dorjar/Festival-2024)
 
-1. Navigate to the project folder:
+### How to run locally
+1. Clone the repository:
    ```bash
-   cd Festival_2024
+   git clone https://github.com/dorjar/Festival-2024.git
+   cd Festival-2024
+
 2. Install dependencies:
    ```bash npm install
+
 3. Start the development server: 
-    ```bashnode index.js
+    ```bash node index.js
     or
     ```bash npm start
+    
 4. Open your browser
    ```bash http://localhost:5000/
 
@@ -47,7 +52,7 @@ To run it locally:
 - HTML5  
 - CSS3  
 - JavaScript 
-- Node.js + Express (for Festival_2024)
+
 
 ---
 
