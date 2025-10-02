@@ -14,6 +14,7 @@ This repository contains my practice coding projects.
 - [Review_Box](./Review_Box/)
 - [CSS_Menu](./CSS_Menu/)
 - [Music Festival 2024](./Web_Assessment_2024/)
+- [Nowa Strona](./Nowa%20Strona/)
 
 ---
 ## 🎶 Festival 2024 (Node/Express Project)
