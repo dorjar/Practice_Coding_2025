@@ -24,7 +24,7 @@ html, body {
     background: var(--background-dark);
     color: var(--text-light);
     /* line-height: 1.6; */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 a {
