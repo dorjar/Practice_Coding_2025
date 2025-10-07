@@ -1,0 +1,10 @@
+#btnExample {
+  width: 200px;
+  height: 200px;
+  background: green;
+  color: white;          /* startowy kontrast */
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
