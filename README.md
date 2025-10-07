@@ -20,6 +20,7 @@ This repository contains my practice coding projects.
 - [School Practice](./Week%204/)
 - [www.Website](./www.WEBSIDE/)
 - [RandomBackground](./RandomBackground/)
+- [Lantern Animation](./Lantern_Animation/)
 
 
 
