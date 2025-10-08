@@ -21,6 +21,11 @@ This repository contains my practice coding projects.
 - [www.Website](./www.WEBSIDE/)
 - [RandomBackground](./RandomBackground/)
 - [Lantern Animation](./Lantern_Animation/)
+- [Animations boxes](./Animations_Boxes/)
+- [My Div Container](./MyDivContainer/)
+- [Pokemon](./pokemon/)
+- [Simpsons](./simpsons/)
+
 
 
 
