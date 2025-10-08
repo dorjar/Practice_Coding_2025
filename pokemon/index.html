@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Minimal, accessible head -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ash Ketchum</title>
+
+  <!-- Optional: clean, readable font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Controls bar: accent colour + collapse/expand -->
+  <div class="controls" role="region" aria-label="Page controls">
+    <span class="controls__label">Accent:</span>
+    <button class="swatch" data-accent="#ff4d5a" aria-label="Red"></button>
+    <button class="swatch" data-accent="#ffd659" aria-label="Yellow"></button>
+    <button class="swatch" data-accent="#4da3ff" aria-label="Blue"></button>
+    <input type="color" id="accentPicker" value="#ff4d5a" aria-label="Custom accent colour" />
+    <div class="controls__spacer" aria-hidden="true"></div>
+    <button id="collapseAll" class="btn" type="button">Collapse all</button>
+    <button id="expandAll" class="btn" type="button">Expand all</button>
+  </div>
+
+  <main class="container">
+    <!-- Hero card -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="avatar"
+           src="https://i.pinimg.com/originals/18/d9/e1/18d9e1307018dbc76750ca7d5124fccd.png"
+           alt="Ash Ketchum">
+      <div class="meta">
+        <h1 id="hero-title" class="title">Ash Ketchum</h1>
+        <p class="subtitle">Pokémon Trainer • Pallet Town, Kanto</p>
+        <span class="tag">Champion of Alola</span>
+      </div>
+    </section>
+
+    <!-- Content cards (each starts with an h3 that is collapsible) -->
+    <section class="grid">
+      <article class="card">
+        <h3>Personal Information</h3>
+        <dl class="dl">
+          <dt>Date of birth:</dt><dd>22nd May (eternally 10)</dd>
+          <dt>Email:</dt><dd><a href="mailto:Ash@billsPC.com">Ash@billsPC.com</a></dd>
+          <dt>Address:</dt><dd>House on the left, Pallet Town, Kanto</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Championships</h3>
+        <ul class="fancy">
+          <li>Orange League Champion</li>
+          <li>Manalo Conference Winner</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Finishes</h3>
+        <ul>
+          <li><b>Lumiose Conference –</b> Runner-Up</li>
+          <li><b>Lily of the Valley Conference –</b> Top 4</li>
+          <li><b>Silver Conference –</b> Top 8</li>
+          <li><b>Ever Grande Conference –</b> Top 8</li>
+          <li><b>Vertress Conference –</b> Top 8</li>
+          <li><b>Indigo Plateau Conference –</b> Top 16</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Personal profile</h3>
+        <p>
+          According to
+          <a href="https://bulbapedia.bulbagarden.net/wiki/Ash_Ketchum" target="_blank" rel="noopener">Bulbapedia</a>:
+          Ash is a Pokémon Trainer from Pallet Town whose goal is to become a Pokémon Master.
+          His starter Pokémon was a Pikachu that he received from Professor Oak.
+          He is the first ever Champion of the Alola region's Pokémon League.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Other experience</h3>
+        <p><b>Battle Frontier –</b> Kanto<br>
+           Defeated seven Frontier Brains; offered the opportunity to become a Frontier Brain.</p>
+        <hr>
+        <p><b>Team Rocket Slayer –</b> Worldwide!<br>
+           It looks like they are blasting off again!</p>
+      </article>
+
+      <article class="card">
+        <h3>Outside interests</h3>
+        <p>There are things that don't involve Pokémon?????</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
