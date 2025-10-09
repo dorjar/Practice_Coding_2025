@@ -5,168 +5,239 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Practice Coding Projects</title>
   <style>
-    :root {
+    :root{
       --radius: 18px;
       --shadow: 0 10px 28px rgba(0,0,0,.18);
       --shadow-hover: 0 16px 36px rgba(0,0,0,.28);
     }
 
-    /* ===== Basic Layout ===== */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f7fb;
-      colour: #222;
-      padding: 32px 16px;
+    /* ===== Base layout ===== */
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f6f7fb;
+      padding:32px 16px 80px;
+      colour:#222; /* UK spelling in comments only; property stays as US 'color' in CSS */
+    }
+    h1{
+      text-align:center;
+      margin:0 0 14px;
+    }
+    .lead{
+      text-align:center;
+      margin:0 0 24px;
+      opacity:.8;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
     }
 
-    h1 {
-      text-align: centre;
-      margin: 0 0 28px;
-      font-size: 2rem;
+    /* ===== Year quick navigation and filter bar ===== */
+    .topbar{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:0 0 22px;
+      position:sticky; top:0; z-index:5;
+      backdrop-filter: blur(6px);
     }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    /* ===== Shared Styles for Year Sections ===== */
-    .year {
-      border-radius: var(--radius);
-      padding: 24px;
+    .chip, .filter-btn{
+      border:none;
+      border-radius:999px;
+      padding:10px 16px;
+      font-weight:700;
+      cursor:pointer;
+      background:#e9ecf4;
       box-shadow: var(--shadow);
-      colour: #fff;
+      transition: transform .15s, box-shadow .2s, background .25s;
+    }
+    .chip:hover, .filter-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      background:#dde3f2;
+    }
+    .filter-btn[aria-pressed="true"]{
+      background:#cfd8ff;
     }
 
-    .year h2 {
-      display: inline-block;
-      margin: 0 0 16px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.25);
+    /* ===== Sections shared styles ===== */
+    .year-section{
+      border-radius: var(--radius);
+      padding:24px;
+      box-shadow: var(--shadow);
+      margin-bottom:26px;
+      color:#fff;
+    }
+    .year-title{
+      display:inline-block;
+      margin:0 0 16px;
+      padding:8px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.25);
       backdrop-filter: blur(4px);
     }
-
-    .projects {
-      display: grid;
+    .projects{
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      gap:18px;
     }
-
-    .project a {
-      display: block;
-      padding: 16px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      colour: #fff;
-      font-weight: 700;
+    .project a{
+      display:block;
+      padding:16px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:700;
+      text-align:center;
       box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
-      text-align: centre;
+      transition: transform .2s, box-shadow .2s, background .3s;
     }
-
-    .project a:hover {
+    .project a:hover{
       transform: translateY(-4px) scale(1.02);
       box-shadow: var(--shadow-hover);
     }
 
-    /* ===== Year 2025 Theme – Blue-Pink ===== */
-    .year-2025 {
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    }
+    /* ===== Colour themes per year ===== */
+    /* 2025 – blue & pink */
+    .y2025{ background: linear-gradient(135deg,#89f7fe,#66a6ff); }
+    .y2025 .project a{ background: linear-gradient(135deg,#ff9a9e,#fad0c4); }
+    .y2025 .project a:hover{ background: linear-gradient(135deg,#a18cd1,#fbc2eb); }
 
-    .year-2025 .project a {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    }
+    /* 2024 – green */
+    .y2024{ background: linear-gradient(135deg,#a8e063,#56ab2f); }
+    .y2024 .project a{ background: linear-gradient(135deg,#56ab2f,#a8e063); }
+    .y2024 .project a:hover{ background: linear-gradient(135deg,#43cea2,#185a9d); }
 
-    .year-2025 .project a:hover {
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-    }
+    /* 2023 – purple */
+    .y2023{ background: linear-gradient(135deg,#c471f5,#fa71cd); }
+    .y2023 .project a{ background: linear-gradient(135deg,#a18cd1,#fbc2eb); }
+    .y2023 .project a:hover{ background: linear-gradient(135deg,#b175ff,#ef8cff); }
 
-    /* ===== Year 2024 Theme – Green ===== */
-    .year-2024 {
-      background: linear-gradient(135deg, #a8e063, #56ab2f);
-    }
-
-    .year-2024 .project a {
-      background: linear-gradient(135deg, #56ab2f, #a8e063);
-    }
-
-    .year-2024 .project a:hover {
-      background: linear-gradient(135deg, #43cea2, #185a9d);
-    }
-
-    /* ===== Year 2023 Theme – Purple ===== */
-    .year-2023 {
-      background: linear-gradient(135deg, #c471f5, #fa71cd);
-    }
-
-    .year-2023 .project a {
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-    }
-
-    .year-2023 .project a:hover {
-      background: linear-gradient(135deg, #b175ff, #ef8cff);
-    }
+    /* ===== Utilities ===== */
+    .hidden{ display:none !important; }
   </style>
 </head>
 <body>
-  <h1>👩‍🎓 My Practice Coding Projects 👩‍🎓</h1>
+  <div class="wrap">
 
-  <div class="container">
+    <h1>👩‍🎓 My Practice Coding Projects 👩‍🎓</h1>
+    <p class="lead">Browse by year or filter using the buttons below.</p>
 
-    <!-- ===== 2025 Projects ===== -->
-    <section class="year year-2025">
-      <h2>2025</h2>
-      <div class="projects">
-        <div class="project"><a href="./toggle-tab-component/">Toggle Tab Component</a></div>
-        <div class="project"><a href="./website-animations/">Website Animations</a></div>
-        <div class="project"><a href="./Sticky-Note/">Sticky Note</a></div>
-        <div class="project"><a href="./Animated_Product/">Animated Product</a></div>
-        <div class="project"><a href="./Color_Picker_Widget/">Color Picker Widget</a></div>
-        <div class="project"><a href="./Hamburger_Menu/">Hamburger Menu</a></div>
-        <div class="project"><a href="./Roaming_Shadows/">Roaming Shadows</a></div>
-        <div class="project"><a href="./3D_Roatation_Animation/">3D Rotation Animation</a></div>
-        <div class="project"><a href="./Review_Box/">Review Box</a></div>
-        <div class="project"><a href="./CSS_Menu/">CSS Menu</a></div>
-        <div class="project"><a href="./Nowa%20Strona/index.html">Nowa Strona</a></div>
-      </div>
-    </section>
+    <!-- ===== Quick nav and filters (built-in anchors + JS filtering) ===== -->
+    <div class="topbar" id="filterBar">
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      <a class="chip" href="#y2025">2025</a>
+      <button class="filter-btn" data-filter="2025">Show 2025</button>
+      <a class="chip" href="#y2024">2024</a>
+      <button class="filter-btn" data-filter="2024">Show 2024</button>
+      <a class="chip" href="#y2023">2023</a>
+      <button class="filter-btn" data-filter="2023">Show 2023</button>
+    </div>
 
-    <!-- ===== 2024 Projects ===== -->
-    <section class="year year-2024">
-      <h2>2024</h2>
-      <div class="projects">
-        <div class="project"><a href="./Web_Assessment_2024/">Music Festival 2024</a></div>
-        <div class="project"><a href="./AJAX - Http Requests/">AJAX - Http Requests</a></div>
-        <div class="project"><a href="./different_inputs_methods/">Different Inputs Methods</a></div>
-        <div class="project"><a href="./Week 4/">School Practice</a></div>
-        <div class="project">
-          <a href="https://github.com/dorjar/Festival-2024" target="_blank">🎶 Festival 2024 (Node/Express Project)</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2023 Projects ===== -->
-    <section class="year year-2023">
-      <h2>2023</h2>
-      <div class="projects">
-        <div class="project"><a href="./Completed HTML/">Sample Website 1</a></div>
-        <div class="project"><a href="./Sample_website/">Sample Website 2</a></div>
-        <div class="project"><a href="./www.WEBSIDE/">Sample Website 3</a></div>
-        <div class="project"><a href="./RandomBackground/">Random Background</a></div>
-        <div class="project"><a href="./Lantern_Animation/">Lantern Animation</a></div>
-        <div class="project"><a href="./Animations_Boxes/">Animation Boxes</a></div>
-        <div class="project"><a href="./MyDivContainer/">My Div Container</a></div>
-        <div class="project"><a href="./pokemon/">Pokemon</a></div>
-        <div class="project"><a href="./simpsons/">Simpsons</a></div>
-      </div>
-    </section>
+    <!-- ===== Sections will be injected here by JS ===== -->
+    <div id="yearsMount"></div>
 
   </div>
+
+  <script>
+    // --- Source of truth: add, edit or move projects here with the proper year ---
+    const projects = [
+      { title: 'Toggle Tab Component', href: './toggle-tab-component/', year: 2025 },
+      { title: 'Website Animations', href: './website-animations/', year: 2025 },
+      { title: 'Sticky Note', href: './Sticky-Note/', year: 2025 },
+      { title: 'Animated Product', href: './Animated_Product/', year: 2025 },
+      { title: 'Color Picker Widget', href: './Color_Picker_Widget/', year: 2025 },
+      { title: 'Hamburger Menu', href: './Hamburger_Menu/', year: 2025 },
+      { title: 'Roaming Shadows', href: './Roaming_Shadows/', year: 2025 },
+      { title: '3D Rotation Animation', href: './3D_Roatation_Animation/', year: 2025 },
+      { title: 'Review Box', href: './Review_Box/', year: 2025 },
+      { title: 'CSS Menu', href: './CSS_Menu/', year: 2025 },
+      { title: 'Nowa Strona', href: './Nowa%20Strona/', year: 2025 },
+
+      { title: 'Music Festival 2024', href: './Web_Assessment_2024/', year: 2024 },
+      { title: 'AJAX - Http Requests', href: './AJAX%20-%20Http%20Requests/', year: 2024 },
+      { title: 'Different Inputs Methods', href: './different_inputs_methods/', year: 2024 },
+      { title: 'School Practice', href: './Week%204/', year: 2024 },
+      { title: '🎶 Festival 2024 (Node/Express Project)', href: 'https://github.com/dorjar/Festival-2024', year: 2024, external: true },
+
+      { title: 'Sample Website1', href: './Completed%20HTML/', year: 2023 },
+      { title: 'Sample Website2', href: './Sample_website/', year: 2023 },
+      { title: 'Sample Website 3', href: './www.WEBSIDE/', year: 2023 },
+      { title: 'Random Background', href: './RandomBackground/', year: 2023 },
+      { title: 'Lantern Animation', href: './Lantern_Animation/', year: 2023 },
+      { title: 'Animation Boxes', href: './Animations_Boxes/', year: 2023 },
+      { title: 'My Div Container', href: './MyDivContainer/', year: 2023 },
+      { title: 'Pokemon', href: './pokemon/', year: 2023 },
+      { title: 'Simpsons', href: './simpsons/', year: 2023 },
+    ];
+
+    // --- Utility: group by year and sort projects by title for a tidy look ---
+    const byYear = projects.reduce((acc, p) => {
+      (acc[p.year] ||= []).push(p);
+      return acc;
+    }, {});
+    Object.values(byYear).forEach(list => list.sort((a,b)=> a.title.localeCompare(b.title)));
+
+    // --- Render sections from newest to oldest ---
+    const yearsMount = document.getElementById('yearsMount');
+    const yearOrder = Object.keys(byYear).map(Number).sort((a,b)=> b-a);
+
+    yearOrder.forEach(year => {
+      const sec = document.createElement('section');
+      sec.className = `year-section y${year} year-${year}`;
+      sec.id = `y${year}`;
+      sec.dataset.year = String(year);
+
+      // Section heading
+      const h2 = document.createElement('h2');
+      h2.className = 'year-title';
+      h2.textContent = year;
+      sec.appendChild(h2);
+
+      // Project grid
+      const grid = document.createElement('div');
+      grid.className = 'projects';
+
+      byYear[year].forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'project';
+        const a = document.createElement('a');
+        a.href = p.href;
+        a.textContent = p.title;
+        if (p.external) a.target = '_blank';
+        item.appendChild(a);
+        grid.appendChild(item);
+      });
+
+      sec.appendChild(grid);
+      yearsMount.appendChild(sec);
+    });
+
+    // --- Filtering: show/hide sections by year ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+
+        const val = btn.dataset.filter;
+        document.querySelectorAll('.year-section').forEach(sec => {
+          if (val === 'all' || sec.dataset.year === val) {
+            sec.classList.remove('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        });
+
+        // Helpful scroll into view when choosing a specific year
+        if (val !== 'all') {
+          const target = document.getElementById('y' + val);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

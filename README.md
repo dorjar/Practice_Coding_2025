@@ -1,32 +1,44 @@
 # Practice Coding 2025
 
-This repository contains my practice coding projects.
+This repository contains my practice coding projects, grouped by year
 
-## Projects
+# Practice Coding (2023–2025)
+
+## 2025
+- [Animated Product](./Animated_Product/)
+- [Color Picker Widget](./Color_Picker_Widget/)
+- [CSS Menu](./CSS_Menu/)
+- [Hamburger Menu](./Hamburger_Menu/)
+- [Nowa Strona](./Nowa%20Strona/)
+- [Review Box](./Review_Box/)
+- [Roaming Shadows](./Roaming_Shadows/)
+- [Sticky Note](./Sticky-Note/)
+- [3D Rotation Animation](./3D_Roatation_Animation/)
 - [Toggle Tab Component](./toggle-tab-component/)
 - [Website Animations](./website-animations/)
-- [Sticky Note](./Sticky-Note/)
-- [Animated_Product](./Animated_Product/)
-- [Color_Picker_Widget](./Color_Picker_Widget/)
-- [Hamburger_Menu](./Hamburger_Menu/)
-- [Roaming_Shadows](./Roaming_Shadows/)
-- [3D_Roatation_Animation](./3D_Roatation_Animation/)
-- [Review_Box](./Review_Box/)
-- [CSS_Menu](./CSS_Menu/)
+
+## 2024
+- [AJAX – Http Requests](./AJAX%20-%20Http%20Requests/)
+- [Different Inputs Methods](./different_inputs_methods/)
 - [Music Festival 2024](./Web_Assessment_2024/)
-- [Nowa Strona](./Nowa%20Strona/)
-- [Sample Website1](./Completed%20HTML/)
-- [Sample Website2](./Sample_website/)
 - [School Practice](./Week%204/)
-- [www.Website](./www.WEBSIDE/)
-- [RandomBackground](./RandomBackground/)
+- 🎶 [Festival 2024 (Node/Express Project)](https://github.com/dorjar/Festival-2024)
+
+## 2023
+- [Animation Boxes](./Animations_Boxes/)
 - [Lantern Animation](./Lantern_Animation/)
-- [Animations boxes](./Animations_Boxes/)
 - [My Div Container](./MyDivContainer/)
 - [Pokemon](./pokemon/)
+- [Random Background](./RandomBackground/)
+- [Sample Website 1](./Completed%20HTML/)
+- [Sample Website 2](./Sample_website/)
+- [Sample Website 3](./www.WEBSIDE/)
 - [Simpsons](./simpsons/)
-- [AJAX - Http Requests ](./AJAX%20-%20Http%20Requests/)
-- [Different Input Methods](./different_inputs_methods/)
+
+---
+
+## Demo
+View live: **https://dorjar.github.io/Practice_Coding_2025/**
 
 
 
