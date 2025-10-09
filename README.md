@@ -25,6 +25,9 @@ This repository contains my practice coding projects.
 - [My Div Container](./MyDivContainer/)
 - [Pokemon](./pokemon/)
 - [Simpsons](./simpsons/)
+- [AJAX - Http Requests ](./AJAX%20-%20Http%20Requests/)
+- [Different Input Methods](./different_inputs_methods/)
+
 
 
 
