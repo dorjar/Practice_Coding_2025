@@ -1,156 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Practice Coding Projects</title>
   <style>
+    :root {
+      --radius: 18px;
+      --shadow: 0 10px 28px rgba(0,0,0,.18);
+      --shadow-hover: 0 16px 36px rgba(0,0,0,.28);
+    }
+
+    /* ===== Basic Layout ===== */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: #333;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      colour: #222;
+      padding: 32px 16px;
     }
+
     h1 {
-      margin-bottom: 40px;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      text-align: centre;
+      margin: 0 0 28px;
+      font-size: 2rem;
     }
-    .projects {
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 28px;
     }
-    .project a {
+
+    /* ===== Shared Styles for Year Sections ===== */
+    .year {
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      colour: #fff;
+    }
+
+    .year h2 {
       display: inline-block;
-      padding: 15px 30px;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      border-radius: 50px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s, box-shadow 0.2s, background 0.4s;
+      margin: 0 0 16px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
     }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .project a {
+      display: block;
+      padding: 16px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      colour: #fff;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+      text-align: centre;
+    }
+
     .project a:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ===== Year 2025 Theme – Blue-Pink ===== */
+    .year-2025 {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    }
+
+    .year-2025 .project a {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+
+    .year-2025 .project a:hover {
       background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    }
+
+    /* ===== Year 2024 Theme – Green ===== */
+    .year-2024 {
+      background: linear-gradient(135deg, #a8e063, #56ab2f);
+    }
+
+    .year-2024 .project a {
+      background: linear-gradient(135deg, #56ab2f, #a8e063);
+    }
+
+    .year-2024 .project a:hover {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+
+    /* ===== Year 2023 Theme – Purple ===== */
+    .year-2023 {
+      background: linear-gradient(135deg, #c471f5, #fa71cd);
+    }
+
+    .year-2023 .project a {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    }
+
+    .year-2023 .project a:hover {
+      background: linear-gradient(135deg, #b175ff, #ef8cff);
     }
   </style>
 </head>
 <body>
-  <h1> 👩‍🎓 My Practice Coding Projects👩‍🎓 </h1>
-  <div class="projects">
+  <h1>👩‍🎓 My Practice Coding Projects 👩‍🎓</h1>
 
-    <div class="project">
-      <a href="./toggle-tab-component/">Toggle Tab Component</a>
-    </div>
+  <div class="container">
 
-    <div class="project">
-      <a href="./website-animations/">Website Animations</a>
-    </div>
+    <!-- ===== 2025 Projects ===== -->
+    <section class="year year-2025">
+      <h2>2025</h2>
+      <div class="projects">
+        <div class="project"><a href="./toggle-tab-component/">Toggle Tab Component</a></div>
+        <div class="project"><a href="./website-animations/">Website Animations</a></div>
+        <div class="project"><a href="./Sticky-Note/">Sticky Note</a></div>
+        <div class="project"><a href="./Animated_Product/">Animated Product</a></div>
+        <div class="project"><a href="./Color_Picker_Widget/">Color Picker Widget</a></div>
+        <div class="project"><a href="./Hamburger_Menu/">Hamburger Menu</a></div>
+        <div class="project"><a href="./Roaming_Shadows/">Roaming Shadows</a></div>
+        <div class="project"><a href="./3D_Roatation_Animation/">3D Rotation Animation</a></div>
+        <div class="project"><a href="./Review_Box/">Review Box</a></div>
+        <div class="project"><a href="./CSS_Menu/">CSS Menu</a></div>
+        <div class="project"><a href="./Nowa%20Strona/index.html">Nowa Strona</a></div>
+      </div>
+    </section>
 
-    <div class="project">
-      <a href="./Sticky-Note/">Sticky Note</a>
-    </div>
+    <!-- ===== 2024 Projects ===== -->
+    <section class="year year-2024">
+      <h2>2024</h2>
+      <div class="projects">
+        <div class="project"><a href="./Web_Assessment_2024/">Music Festival 2024</a></div>
+        <div class="project"><a href="./AJAX - Http Requests/">AJAX - Http Requests</a></div>
+        <div class="project"><a href="./different_inputs_methods/">Different Inputs Methods</a></div>
+        <div class="project"><a href="./Week 4/">School Practice</a></div>
+        <div class="project">
+          <a href="https://github.com/dorjar/Festival-2024" target="_blank">🎶 Festival 2024 (Node/Express Project)</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="project">
-      <a href="./Animated_Product/">Animated Product</a>
-    </div>
-
-    <div class="project">
-      <a href="./Color_Picker_Widget/">Color Picker Widget</a>
-    </div>
-
-    <div class="project">
-      <a href="./Hamburger_Menu/">Hamburger Menu</a>
-    </div>
-
-    <div class="project">
-      <a href="./Roaming_Shadows/">Roaming Shadows</a>
-    </div>
-
-    <div class="project">
-      <a href="./3D_Roatation_Animation/">3D Roatation Animation</a>
-    </div>
-
-    <div class="project">
-      <a href="./Review_Box/">Review Box</a>
-    </div>
-
-    <div class="project">
-      <a href="./CSS_Menu/">CSS Menu</a>
-    </div>
-
-    <div class="project">
-      <a href="./Web_Assessment_2024/">Music Festival 2024</a>
-    </div>
-
-    <div class="project">
-      <a href="./Nowa%20Strona/index.html">Nowa Strona</a>
-    </div>
-
-    <div class="project">
-      <a href="./Completed HTML/">Sample Webiste1</a>
-    </div>
-
-    <div class="project">
-      <a href="./Sample_website/">Sample Website2</a>
-    </div>
-
-    <div class="project">
-      <a href="./Week 4/">School Practice</a>
-    </div>
-
-    <div class="project">
-      <a href="./www.WEBSIDE/">Sample Website 3</a>
-    </div>
-
-    <div class="project">
-      <a href="./RandomBackground/">Random Background</a>
-    </div>
-
-    <div class="project">
-      <a href="./Lantern_Animation/">Lantern Animation</a>
-    </div>
-
-    <div class="project">
-      <a href="./Animations_Boxes/">Animation Boxes</a>
-    </div>
-
-    <div class="project">
-      <a href="./MyDivContainer/">My Div Container</a>
-    </div>
-
-    <div class="project">
-      <a href="./pokemon/">Pokemon</a>
-    </div>
-
-    <div class="project">
-      <a href="./simpsons/">Simpsons</a>
-    </div>
-
-    <div class="project">
-      <a href="./AJAX - Http Requests/">AJAX - Http Requests</a>
-    </div>
-
-    <div class="project">
-      <a href="./different_inputs_methods/">Different Inputs Methods</a>
-    </div>
-
-    
-
-    <div class="project">
-      <a href="https://github.com/dorjar/Festival-2024" target="_blank">
-      🎶 Festival 2024 (Node/Express Project)
-      </a>
-    </div>
-
+    <!-- ===== 2023 Projects ===== -->
+    <section class="year year-2023">
+      <h2>2023</h2>
+      <div class="projects">
+        <div class="project"><a href="./Completed HTML/">Sample Website 1</a></div>
+        <div class="project"><a href="./Sample_website/">Sample Website 2</a></div>
+        <div class="project"><a href="./www.WEBSIDE/">Sample Website 3</a></div>
+        <div class="project"><a href="./RandomBackground/">Random Background</a></div>
+        <div class="project"><a href="./Lantern_Animation/">Lantern Animation</a></div>
+        <div class="project"><a href="./Animations_Boxes/">Animation Boxes</a></div>
+        <div class="project"><a href="./MyDivContainer/">My Div Container</a></div>
+        <div class="project"><a href="./pokemon/">Pokemon</a></div>
+        <div class="project"><a href="./simpsons/">Simpsons</a></div>
+      </div>
+    </section>
 
   </div>
 </body>
