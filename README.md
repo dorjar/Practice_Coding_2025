@@ -37,8 +37,9 @@ This repository contains my practice coding projects, grouped by year
 
 ---
 
-## Demo
-View live: **https://dorjar.github.io/Practice_Coding_2025/**
+## 🌐 Demo Links
+You can explore my projects directly on **GitHub Pages**:  
+👉 [dorjar.github.io/Practice_Coding_2025](https://dorjar.github.io/Practice_Coding_2025/)  
 
 
 
@@ -85,9 +86,7 @@ Since it uses a server, it cannot be hosted on GitHub Pages.
 
 ---
 
-## 🌐 Demo Links
-You can explore my projects directly on **GitHub Pages**:  
-👉 [dorjar.github.io/Practice_Coding_2025](https://dorjar.github.io/Practice_Coding_2025/)  
+
 
 
 
