@@ -144,36 +144,38 @@
   <script>
     // --- Source of truth: add, edit or move projects here with the proper year ---
     const projects = [
-      { title: 'Unit Converter', href: './2025/Unit_Converter', year: 2025 }, 
-      { title: 'Website Animations', href: './website-animations/', year: 2025 }, 
-      { title: 'Sticky Note', href: './Sticky-Note/', year: 2025 }, 
-      { title: 'Animated Product', href: './Animated_Product/', year: 2025 }, 
-      { title: 'Color Picker Widget', href: './Color_Picker_Widget/', year: 2025 }, 
-      { title: 'Hamburger Menu', href: './Hamburger_Menu/', year: 2025 }, 
-      { title: 'Roaming Shadows', href: './Roaming_Shadows/', year: 2025 }, 
-      { title: '3D Rotation Animation', href: './3D_Roatation_Animation/', year: 2025 }, 
-      { title: 'Review Box', href: './Review_Box/', year: 2025 }, 
-      
+      // 2025
+      { title: '3D Rotation Animation', href: './2025/3D_Roatation_Animation/', year: 2025 },
+      { title: 'Animated Product',       href: './2025/Animated_Product/',      year: 2025 },
+      { title: 'Color Picker Widget',    href: './2025/Color_Picker_Widget/',   year: 2025 },
+      { title: 'Hamburger Menu',         href: './2025/Hamburger_Menu/',        year: 2025 },
+      { title: 'Review Box',             href: './2025/Review_Box/',            year: 2025 },
+      { title: 'Roaming Shadows',        href: './2025/Roaming_Shadows/',       year: 2025 },
+      { title: 'Sticky Note',            href: './2025/Sticky-Note/',           year: 2025 },
+      { title: 'Unit Converter',         href: './2025/Unit_Converter/',        year: 2025 },
+      { title: 'Website Animations',     href: './2025/website-animations/',    year: 2025 },
 
-      { title: 'CSS Menu', href: './CSS_Menu/', year: 2024 }, 
-      { title: 'Music Festival 2024', href: './Web_Assessment_2024/', year: 2024 }, 
-      { title: 'AJAX - Http Requests', href: './AJAX%20-%20Http%20Requests/', year: 2024 }, 
-      { title: 'School Practice', href: './Week%204/', year: 2024 }, 
-      { title: '🎶 Festival 2024 (Node/Express Project)', href: 'https://github.com/dorjar/Festival-2024', year: 2024, external: true }, 
-      { title: 'Sample Website1', href: './Completed%20HTML/', year: 2024 },
-      { title: 'Sample Website2', href: './Sample_website/', year: 2024 },
-      { title: 'Sample Website 3', href: './www.WEBSIDE/', year: 2024 },
+      // 2024
+      { title: 'AJAX - Http Requests',   href: './2024/AJAX%20-%20Http%20Requests/', year: 2024 },
+      { title: 'CSS Menu',               href: './2024/CSS_Menu/',                    year: 2024 },
+      { title: 'Music Festival 2024',    href: './2024/Web_Assessment_2024/',         year: 2024 },
+      { title: 'School Practice',        href: './2024/Week%204/',                    year: 2024 },
+      { title: 'Sample Website 2',       href: './2024/Sample_website/',              year: 2024 },
+      { title: 'Sample Website 3',       href: './2024/www.WEBSIDE/',                 year: 2024 },
+      { title: '🎶 Festival 2024 (Node/Express Project)', href: 'https://github.com/dorjar/Festival-2024', year: 2024, external: true },
 
-      { title: 'Different Inputs Methods', href: './different_inputs_methods/', year: 2023 }, 
-      { title: 'Nowa Strona', href: './Nowa%20Strona/', year: 2023 }, 
-      { title: 'Random Background', href: './RandomBackground/', year: 2023 }, 
-      { title: 'Lantern Animation', href: './Lantern_Animation/', year: 2023 }, 
-      { title: 'Animation Boxes', href: './Animations_Boxes/', year: 2023 }, 
-      { title: 'My Div Container', href: './MyDivContainer/', year: 2023 }, 
-      { title: 'Pokemon', href: './pokemon/', year: 2023 }, 
-      { title: 'Simpsons', href: './simpsons/', year: 2023 }, 
-      { title: 'Complited HTML', href: './2023/Completed HTML', year: 2023 } 
+      // 2023
+      { title: 'Animation Boxes',        href: './2023/Animations_Boxes/',      year: 2023 },
+      { title: 'Lantern Animation',      href: './2023/Lantern_Animation/',     year: 2023 },
+      { title: 'My Div Container',       href: './2023/MyDivContainer/',        year: 2023 },
+      { title: 'Pokemon',                href: './2023/pokemon/',               year: 2023 },
+      { title: 'Random Background',      href: './2023/RandomBackground/',      year: 2023 },
+      { title: 'Simpsons',               href: './2023/simpsons/',              year: 2023 },
+      { title: 'Different Inputs Methods', href: './2023/different_inputs_methods/', year: 2023 },
+      { title: 'Nowa Strona',            href: './2023/Nowa%20Strona/',         year: 2023 },
+      { title: 'Sample Website 1',       href: './2023/Completed%20HTML/',      year: 2023 }
     ];
+
 
     // --- Utility: group by year and sort projects by title for a tidy look ---
     const byYear = projects.reduce((acc, p) => {

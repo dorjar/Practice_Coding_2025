@@ -10,7 +10,7 @@ This repository contains my practice coding projects, grouped by year 2023 -2025
 - [Review Box](./2025/Review_Box/)
 - [Roaming Shadows](./2025/Roaming_Shadows/)
 - [Sticky Note](./2025/Sticky-Note/)
-- [3D Rotation Animation](./2025/3D_Roatation_Animation//)
+- [3D Rotation Animation](./2025/3D_Roatation_Animation/)
 - [Unit Converter](./2025/Unit_Converter/)
 - [Website Animations](./2025/website-animations/)
 
