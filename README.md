@@ -1,7 +1,9 @@
-# Practice Coding (2023–2025)
+# Practice Coding (2023–2026)
 
-This repository contains my practice coding projects, grouped by year 2023 -2025
+This repository contains my practice coding projects, grouped by year 2023 -2026
 
+## broodl
+- NEXTJS & FIREBASE FULL COURSE
 
 ## 2025
 - [Animated Product](./2025/Animated_Product/)
@@ -33,6 +35,7 @@ This repository contains my practice coding projects, grouped by year 2023 -2025
 - [Random Background](./2023/RandomBackground/)
 - [Simpsons](./2023/simpsons/)
 - [Sample Website 1](./2023/Completed%20HTML/)
+
 
 ---
 
